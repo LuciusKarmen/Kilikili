@@ -1,0 +1,11 @@
+2025-10-18 13:33:56 [main] INFO  o.example.starweb.StarWebApplication - Starting StarWebApplication using Java 21.0.7 with PID 29104 (C:\Users\HP\Desktop\Best\Star\backend\Star-java\Star-web\target\classes started by HP in C:\Users\HP\Desktop\Best\Star\backend\Star-java)
+2025-10-18 13:33:56 [main] INFO  o.example.starweb.StarWebApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 13:33:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 10003 (http)
+2025-10-18 13:33:57 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 13:33:57 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-18 13:33:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 13:33:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 681 ms
+2025-10-18 13:33:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 10003 (http) with context path '/'
+2025-10-18 13:33:57 [main] INFO  o.example.starweb.StarWebApplication - Started StarWebApplication in 1.373 seconds (process running for 1.792)
+2025-10-18 13:34:11 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-18 13:34:11 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
