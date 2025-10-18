@@ -4,7 +4,7 @@ spring:
 
   # 数据库配置
   datasource:
-    url: jdbc:mysql://localhost:3306/admin?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/star?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: xuguangming
     password: 13952803647x
     driver-class-name: com.mysql.cj.jdbc.Driver

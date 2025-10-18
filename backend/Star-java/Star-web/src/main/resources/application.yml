@@ -3,7 +3,7 @@ spring:
   application:
     name: Star-web
   datasource:
-    url: jdbc:mysql://localhost:3306/web
+    url: jdbc:mysql://localhost:3306/star?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: xuguangming
     password: 13952803647x
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -26,7 +26,7 @@ spring:
           max-wait: -1ms                 # 获取连接的最大等待时间（-1 表示无限等待）
 
 server:
-  port: 10003
+  port: 10002
 
 logging:
   file:
