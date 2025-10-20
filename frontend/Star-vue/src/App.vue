@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// 导入路由
+import router from './router'
+</script>
 
 <template>
-  <h1>Star</h1>
+  <router-view></router-view>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use '../src/common/index.scss';
+</style>
