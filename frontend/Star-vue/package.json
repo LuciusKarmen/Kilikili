@@ -8,9 +8,6 @@
   },
   "scripts": {
     "dev": "vite",
-    "dev:chrome": "cross-env BROWSER=chrome vite",
-    "dev:firefox": "cross-env BROWSER=firefox vite",
-    "dev:edge": "cross-env BROWSER=edge vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:e2e": "playwright test",

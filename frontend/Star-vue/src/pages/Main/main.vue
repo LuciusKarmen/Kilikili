@@ -20,13 +20,18 @@ import { ref } from 'vue'
   width: 100%;
   .header {
     width: 100%;
-    height: 170px;
+    height: 22vh;
     background-color: aqua;
   }
   .classic {
     width: 100%;
-    height: 100px;
+    height: 15vh;
     background-color: rgb(216, 254, 78);
+  }
+  .top_v {
+    width: 100%;
+    height: 63vh;
+    background-color: rgb(41, 255, 18);
   }
 }
 </style>
