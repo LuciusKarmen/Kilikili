@@ -1,6 +1,8 @@
 <template>
   <div class="main">
-    <div class="header"></div>
+    <div class="header">
+      <Title></Title>
+    </div>
     <div class="classic"></div>
     <div class="top_v">
       <!-- 设计轮播图 -->
@@ -14,10 +16,13 @@
 </template>
 <script lang="ts" setup name="">
 import { ref } from 'vue'
+import Title from '../../compontents/Title/index.vue'
 </script>
 <style lang="scss" scoped>
 .main {
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: azure;
   .header {
     width: 100%;
     height: 22vh;
@@ -33,5 +38,7 @@ import { ref } from 'vue'
     height: 63vh;
     background-color: rgb(41, 255, 18);
   }
+}
+@media (max-width: 768px) {
 }
 </style>

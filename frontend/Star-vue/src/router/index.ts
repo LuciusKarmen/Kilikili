@@ -13,6 +13,26 @@ const router = createRouter({
       name: 'our',
       component: () => import('../pages/Our/index.vue'),
     },
+    {
+      path: '/message',
+      name: 'message',
+      component: () => import('../pages/Message/index.vue'),
+    },
+    {
+      path: '/video/{id}',
+      name: 'video',
+      component: () => import('../pages/Video/index.vue'),
+    },
+    {
+      path: '/uc',
+      name: 'uc',
+      component: () => import('../pages/UserCentre/index.vue'),
+    },
+    {
+      path: '/platform',
+      name: 'platform',
+      component: () => import('../pages/Platform/index.vue'),
+    },
   ],
 })
 
