@@ -3,7 +3,11 @@
     <div class="header">
       <Title></Title>
     </div>
-    <div class="classic"></div>
+    <div class="classic">
+      <div class="master">站长推荐</div>
+      <div class="class"></div>
+      <div class="other"></div>
+    </div>
     <div class="top_v">
       <!-- 设计轮播图 -->
       <div></div>
