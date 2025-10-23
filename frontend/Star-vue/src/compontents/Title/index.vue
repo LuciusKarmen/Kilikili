@@ -3,18 +3,18 @@
     <div class="bar">
       <div class="left">
         <div class="bar_item"><img src="../../../public/首页.png" alt="" class="p" />首页</div>
-        <div class="bar_item"><img src="../../../public/共享.png" alt="" class="p" />星辰论坛</div>
+        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />星辰论坛</div>
         <div class="bar_item"><img src="../../../public/收藏.png" alt="" class="p" />游戏中心</div>
-        <div class="bar_item"><img src="../../../public/分享.png" alt="" class="p" />聊天室</div>
-        <div class="bar_item"><img src="../../../public/评论.png" alt="" class="p" />关于我们</div>
+        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />聊天室</div>
+        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />关于我们</div>
       </div>
       <div class="mid"></div>
       <div class="right">
         <div class="bar_item">头像</div>
         <div class="bar_item"><img src="../../../public/私信.png" alt="" class="p" />消息</div>
-        <div class="bar_item"><img src="../../../public/定位.png" alt="" class="p" />我的</div>
+        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />我的</div>
         <div class="bar_item"><img src="../../../public/添加.png" alt="" class="p" />创作中心</div>
-        <button class="btn">上传</button>
+        <el-button class="btn" size="large">添加</el-button>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ import { ref } from 'vue'
   height: 22vh;
   background-image: url('../../../public/face.png');
   background-size: cover;
-  background-position: center 44%;
+  background-position: center 41%;
   background-repeat: no-repeat;
   .bar {
     width: 100%;
@@ -70,6 +70,9 @@ import { ref } from 'vue'
       width: 40%;
       display: flex;
       justify-content: space-around;
+      .btn {
+        background: palevioletred;
+      }
       .bar_item {
         width: 20%;
         height: 100%;
