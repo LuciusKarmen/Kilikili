@@ -14,7 +14,7 @@
         <div class="bar_item"><img src="../../../public/私信.png" alt="" class="p" />消息</div>
         <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />我的</div>
         <div class="bar_item"><img src="../../../public/添加.png" alt="" class="p" />创作中心</div>
-        <el-button class="btn" size="large">添加</el-button>
+        <el-button type="danger" size="large">添加作品</el-button>
       </div>
     </div>
   </div>
