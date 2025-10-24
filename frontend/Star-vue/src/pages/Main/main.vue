@@ -4,8 +4,26 @@
       <Title></Title>
     </div>
     <div class="classic">
-      <div class="master">站长推荐</div>
-      <div class="class"></div>
+      <div class="master">
+        <div><img src="../../../public/火.png" alt="" /></div>
+        <div>站长推荐</div>
+      </div>
+      <div class="classify">
+        <div class="table">
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+          <div class="class">模版</div>
+        </div>
+      </div>
       <div class="other"></div>
     </div>
     <div class="top_v">
@@ -35,7 +53,47 @@ import Title from '../../compontents/Title/index.vue'
   .classic {
     width: 100%;
     height: 15vh;
-    background-color: rgb(216, 254, 78);
+    flex-direction: row;
+    display: flex;
+
+    .master {
+      width: 10%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .classify {
+      width: 66%;
+      height: 100%;
+      .table {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        .class {
+          width: 20%;
+          height: 50%;
+          background-color: rgb(32, 245, 206);
+          border-radius: 20px;
+        }
+      }
+    }
+    // 知识点伪元素的妙用
+    .other::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px; /* 加竖线这个倒是第一次见到 */
+      background-color: black;
+    }
+    .other {
+      width: 22%;
+      height: 100%;
+      position: relative;
+    }
   }
   .top_v {
     width: 100%;
