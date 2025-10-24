@@ -1,8 +1,22 @@
-* {
+/* 全局重置 */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
 body {
-  background: #b8b8b8;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* 可选：隐藏不必要的横向滚动 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
 }

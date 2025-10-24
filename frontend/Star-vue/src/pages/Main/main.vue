@@ -28,17 +28,21 @@
           <div class="class">更多</div>
         </div>
       </div>
-      <div class="other"></div>
+      <div class="other">
+        <img src="../../../public/ex/" alt="" />
+      </div>
     </div>
     <div class="top_v">
       <!-- 设计轮播图 -->
       <div class="lun">
-        <img src="../../../public/" alt="" />
+        <img src="../../../public/ex/Snipaste_2025-10-24_16-00-12.png" alt="" class="tu" />
       </div>
       <!-- 推荐 -->
       <div class="show">
         <div class="video_box">
-          <div class="video"><img src="" alt="" /></div>
+          <div class="video">
+            <img src="../../../public/ex/Snipaste_2025-10-24_15-58-19.png" alt="" />
+          </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
           <div class="title">测试视频1</div>
@@ -48,7 +52,9 @@
           </div>
         </div>
         <div class="video_box">
-          <div class="video"><img src="" alt="" /></div>
+          <div class="video">
+            <img src="../../../public/ex/Snipaste_2025-10-24_15-59-31.png" alt="" />
+          </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
           <div class="title">测试视频2</div>
@@ -58,7 +64,9 @@
           </div>
         </div>
         <div class="video_box">
-          <div class="video"><img src="" alt="" /></div>
+          <div class="video">
+            <img src="../../../public/ex/Snipaste_2025-10-24_15-59-46.png" alt="" />
+          </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
           <div class="title">测试视频3</div>
@@ -68,7 +76,9 @@
           </div>
         </div>
         <div class="video_box">
-          <div class="video"><img src="" alt="" /></div>
+          <div class="video">
+            <img src="../../../public/ex/Snipaste_2025-10-24_16-00-20.png" alt="" />
+          </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
           <div class="title">测试视频1</div>
@@ -78,7 +88,9 @@
           </div>
         </div>
         <div class="video_box">
-          <div class="video"><img src="" alt="" /></div>
+          <div class="video">
+            <img src="../../../public/ex/Snipaste_2025-10-24_16-00-34.png" alt="" />
+          </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
           <div class="title">测试视频1</div>
@@ -88,7 +100,9 @@
           </div>
         </div>
         <div class="video_box">
-          <div class="video"><img src="" alt="" /></div>
+          <div class="video">
+            <img src="../../../public/ex/Snipaste_2025-10-24_16-00-49.png" alt="" />
+          </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
           <div class="title">测试视频1</div>
@@ -100,7 +114,7 @@
       </div>
     </div>
     <!-- 视频矩阵 -->
-    <div></div>
+    <div class="bottom_v"></div>
   </div>
 </template>
 <script lang="ts" setup name="">
@@ -173,7 +187,62 @@ import Title from '../../compontents/Title/index.vue'
   .top_v {
     width: 100%;
     height: 63vh;
-    background-color: rgb(255, 255, 255);
+    padding-left: 4vw;
+    padding-right: 4vw;
+    display: flex;
+    flex-flow: row;
+
+    .lun {
+      width: 38vw;
+      height: 100%;
+      .tu {
+        width: 100%;
+        height: 95%;
+        padding-top: 5%;
+      }
+    }
+    .show {
+      margin-left: 3vw;
+      width: 51vw;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1vw;
+      height: 95%;
+      padding-top: 2%;
+      .video_box {
+        .video {
+          width: 100%;
+          height: 70%;
+          overflow: hidden; /* 可选：防止溢出 */
+          position: relative;
+          background-color: #000; /* 黑色背景更像视频封面 */
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // 关键：裁剪填满
+            object-position: center; // 居中对齐
+            display: block; // 去除底部默认间隙
+          }
+        }
+        .title {
+          width: 100%;
+          height: 20%;
+          font-size: 25px;
+          padding: 5px;
+          font-weight: 500;
+        }
+        .bottom {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          justify-content: space-between;
+          flex-flow: row;
+          padding: 5px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 768px) {
