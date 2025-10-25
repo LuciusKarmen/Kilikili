@@ -18,8 +18,9 @@ const router = createRouter({
       name: 'message',
       component: () => import('../pages/Message/index.vue'),
     },
+    // {id}
     {
-      path: '/video/{id}',
+      path: '/video',
       name: 'video',
       component: () => import('../pages/Video/index.vue'),
     },

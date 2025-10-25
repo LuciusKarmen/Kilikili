@@ -29,13 +29,18 @@
         </div>
       </div>
       <div class="other">
-        <img src="../../../public/ex/" alt="" />
+        <img src="../../../public/Starlogo.png" alt="" class="logo" />
       </div>
     </div>
     <div class="top_v">
       <!-- 设计轮播图 -->
       <div class="lun">
-        <img src="../../../public/ex/Snipaste_2025-10-24_16-00-12.png" alt="" class="tu" />
+        <img
+          src="../../../public/ex/Snipaste_2025-10-24_16-00-12.png"
+          alt=""
+          class="tu"
+          @click="show_example"
+        />
       </div>
       <!-- 推荐 -->
       <div class="show">
@@ -45,7 +50,7 @@
           </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
-          <div class="title">测试视频1</div>
+          <div class="title">什么叫口碑，这TM就叫口碑</div>
           <div class="bottom">
             <div class="user">暗夜星辰</div>
             <div class="time">1小时前</div>
@@ -57,7 +62,7 @@
           </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
-          <div class="title">测试视频2</div>
+          <div class="title">《原神》奈芙尔角色PV</div>
           <div class="bottom">
             <div class="user">暗夜星辰</div>
             <div class="time">1小时前</div>
@@ -69,7 +74,7 @@
           </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
-          <div class="title">测试视频3</div>
+          <div class="title">《雷军请回答》DAY 2？</div>
           <div class="bottom">
             <div class="user">暗夜星辰</div>
             <div class="time">1小时前</div>
@@ -81,7 +86,7 @@
           </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
-          <div class="title">测试视频1</div>
+          <div class="title">你不准喜欢她</div>
           <div class="bottom">
             <div class="user">暗夜星辰</div>
             <div class="time">1小时前</div>
@@ -93,7 +98,7 @@
           </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
-          <div class="title">测试视频1</div>
+          <div class="title">顶级智斗</div>
           <div class="bottom">
             <div class="user">暗夜星辰</div>
             <div class="time">1小时前</div>
@@ -105,7 +110,7 @@
           </div>
           <!-- <div>时间</div>
           <div>数据</div> -->
-          <div class="title">测试视频1</div>
+          <div class="title">S15 4K极清直播间</div>
           <div class="bottom">
             <div class="user">暗夜星辰</div>
             <div class="time">1小时前</div>
@@ -114,12 +119,30 @@
       </div>
     </div>
     <!-- 视频矩阵 -->
-    <div class="bottom_v"></div>
+    <div class="bottom_v">
+      <div class="video_box" v-for="(item, index) in 30" :key="index">
+        <div class="video">
+          <img src="../../../public/ex/Snipaste_2025-10-24_16-00-20.png" alt="" />
+        </div>
+        <!-- <div>时间</div>
+          <div>数据</div> -->
+        <div class="title">你不准喜欢她</div>
+        <div class="bottom">
+          <div class="user">暗夜星辰</div>
+          <div class="time">1小时前</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts" setup name="">
 import { ref } from 'vue'
 import Title from '../../compontents/Title/index.vue'
+import router from '@/router'
+const show_example = () => {
+  console.log('show_example')
+  router.push('/video')
+}
 </script>
 <style lang="scss" scoped>
 .main {
@@ -181,7 +204,11 @@ import Title from '../../compontents/Title/index.vue'
       width: 22%;
       height: 100%;
       position: relative;
-      background-color: rgb(255, 255, 255);
+      padding-left: 3%;
+      .logo {
+        height: 90%;
+        margin-top: 5%;
+      }
     }
   }
   .top_v {
@@ -241,6 +268,47 @@ import Title from '../../compontents/Title/index.vue'
           flex-flow: row;
           padding: 5px;
         }
+      }
+    }
+  }
+  .bottom_v {
+    width: 100%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1vw;
+    .video_box {
+      width: 100%;
+      .video {
+        width: 100%;
+        height: 70%;
+        // overflow: hidden; /* 可选：防止溢出 */
+        position: relative;
+        background-color: #000;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; // 关键：裁剪填满
+          object-position: center; // 居中对齐
+          display: block; // 去除底部默认间隙
+        }
+      }
+      .title {
+        width: 100%;
+        height: 20%;
+        font-size: 25px;
+        padding: 5px;
+        font-weight: 500;
+      }
+      .bottom {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
+        padding: 5px;
       }
     }
   }
