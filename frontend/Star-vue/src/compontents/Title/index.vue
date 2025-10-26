@@ -8,10 +8,19 @@
         <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />聊天室</div>
         <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />关于我们</div>
       </div>
-      <div class="mid"></div>
+      <div class="mid">
+        <div>search</div>
+        <div class="tu"><img src="../../../public/搜索.png" alt="" /></div>
+      </div>
       <div class="right">
-        <div class="bar_item_p"><img src="../../../public/" alt="" /></div>
+        <!-- 头像框 + 提示,郑重提示 -->
+        <el-tooltip content="个人中心" placement="bottom" effect="light">
+          <div class="bar_item_p">
+            <img src="../../../public/艾希.png" alt="头像" />
+          </div>
+        </el-tooltip>
         <div class="bar_item"><img src="../../../public/私信.png" alt="" class="p" />消息</div>
+        <div class="bar_item"><img src="../../../public/收藏.png" alt="" class="p" />收藏</div>
         <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />我的</div>
         <div class="bar_item"><img src="../../../public/添加.png" alt="" class="p" />创作中心</div>
         <el-button type="danger" size="large">添加作品</el-button>
@@ -62,31 +71,59 @@ import { ref } from 'vue'
       width: 20%;
       height: 60%;
       background-color: rgb(244, 244, 244);
-      border: 1px solid rgb(68, 68, 68);
-      border-radius: 20px;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 10px;
+      position: relative;
+      .tu {
+        width: 4.5vh;
+        height: 4.5vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        :hover {
+          transform: translateY(-0.5vh);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
     .right {
       width: 40%;
       display: flex;
-      justify-content: space-around;
-      .btn {
-        background: palevioletred;
+      gap: 1.2vh; // 统一间距，比 space-around 更可控
+      align-items: center;
+      .el-button {
+        flex: none;
+        width: 5vw; // 或 120px，根据设计调整
+        font-size: 1.2vh;
+        font-weight: 600;
       }
       .bar_item_p {
+        margin-left: 1vw;
         background-color: rgb(255, 255, 255);
         border-radius: 50%;
-        width: 5vh;
-        height: 5vh;
-        border: 2px solid rgb(16, 16, 16);
+        width: 6vh;
+        height: 6vh;
+        border: 2px solid rgb(255, 255, 255);
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         transition: transform 0.2s ease;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 50%;
+        }
+
         :hover {
           transform: scale(1.1);
         }
       }
       .bar_item {
-        width: 20%;
+        flex: 1;
         height: 100%;
         font-size: 2.2vh;
         .p {

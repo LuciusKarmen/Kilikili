@@ -5,7 +5,12 @@
     </div>
     <div class="main">
       <div class="left">
-        <div class="video_box">1</div>
+        <div class="video_box">
+          <div class="top"></div>
+          <div class="v"></div>
+          <div class="more"></div>
+          <div class="info"></div>
+        </div>
         <div class="commit"></div>
       </div>
       <div class="right">
@@ -33,23 +38,48 @@ import Blank from '../../compontents/Title/blank.vue'
     display: flex;
     flex-flow: row;
     .left {
-      width: 48%;
+      width: 65%;
       height: 100%;
       background-color: aqua;
+      .video_box {
+        width: 100%;
+        height: 100vh;
+        .top {
+          width: 100%;
+          height: 10vh;
+          background-color: rgb(255, 255, 255);
+        }
+        .v {
+          width: 100%;
+          height: 50vh;
+          background-color: rgb(208, 53, 255);
+        }
+        .more {
+          width: 100%;
+          height: 5vh;
+          background-color: rgb(22, 166, 255);
+        }
+        .info {
+          width: 100%;
+          height: 5vh;
+          background-color: rgb(255, 121, 121);
+        }
+      }
     }
     .right {
       width: 26.8vw;
-      padding-left: 24.4vw;
+      padding-left: 2.4vw;
       height: 100%;
       background-color: rgb(255, 58, 209);
       .right_t {
         width: 100%;
-        height: 50%;
+        height: 30vh;
         background-color: rgb(238, 91, 91);
       }
       .right_b {
         width: 100%;
-        height: 50%;
+        min-height: 70vh;
+        background-color: rgb(204, 255, 0);
       }
     }
   }
