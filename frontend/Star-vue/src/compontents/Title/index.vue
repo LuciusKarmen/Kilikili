@@ -10,7 +10,7 @@
       </div>
       <div class="mid"></div>
       <div class="right">
-        <div class="bar_item">头像</div>
+        <div class="bar_item_p"><img src="../../../public/" alt="" /></div>
         <div class="bar_item"><img src="../../../public/私信.png" alt="" class="p" />消息</div>
         <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />我的</div>
         <div class="bar_item"><img src="../../../public/添加.png" alt="" class="p" />创作中心</div>
@@ -44,7 +44,6 @@ import { ref } from 'vue'
       justify-content: space-around;
       align-items: center;
       .bar_item {
-        width: 20%;
         height: 100%;
         font-size: 2.2vh;
         .p {
@@ -72,6 +71,19 @@ import { ref } from 'vue'
       justify-content: space-around;
       .btn {
         background: palevioletred;
+      }
+      .bar_item_p {
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        width: 5vh;
+        height: 5vh;
+        border: 2px solid rgb(16, 16, 16);
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease;
+        :hover {
+          transform: scale(1.1);
+        }
       }
       .bar_item {
         width: 20%;
