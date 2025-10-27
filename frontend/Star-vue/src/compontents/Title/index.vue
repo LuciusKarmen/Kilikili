@@ -15,7 +15,7 @@
       <div class="right">
         <!-- 头像框 + 提示,郑重提示 -->
         <el-tooltip content="个人中心" placement="bottom" effect="light">
-          <div class="bar_item_p">
+          <div class="bar_item_p" @click="showLogin = true">
             <img src="../../../public/艾希.png" alt="头像" />
           </div>
         </el-tooltip>
@@ -26,10 +26,13 @@
         <el-button type="danger" size="large">添加作品</el-button>
       </div>
     </div>
+    <Login :show="showLogin" @update:show="showLogin = $event" />
   </div>
 </template>
 <script lang="ts" setup name="Title">
 import { ref } from 'vue'
+import Login from '../Login/login.vue'
+const showLogin = ref(false)
 </script>
 <style lang="scss" scoped>
 .title {

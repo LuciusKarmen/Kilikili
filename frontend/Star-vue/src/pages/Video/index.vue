@@ -6,15 +6,31 @@
     <div class="main">
       <div class="left">
         <div class="video_box">
-          <div class="top"></div>
+          <div class="top">
+            <div class="title">测试视频</div>
+            <div class="number">
+              <div>播放量</div>
+              <div>弹幕数</div>
+              <div>2025年10月27日23:38:48</div>
+              <div>自制</div>
+            </div>
+          </div>
           <div class="v"></div>
           <div class="more"></div>
-          <div class="info"></div>
+          <div class="info">
+            <div>点赞</div>
+            <div>投币</div>
+            <div>收藏</div>
+            <div>转发</div>
+          </div>
         </div>
         <div class="commit"></div>
       </div>
       <div class="right">
-        <div class="right_t"></div>
+        <div class="right_t">
+          <div class="right_t_l">1</div>
+          <div class="right_t_r">2</div>
+        </div>
         <div class="right_b"></div>
       </div>
     </div>
@@ -46,23 +62,41 @@ import Blank from '../../compontents/Title/blank.vue'
         height: 100vh;
         .top {
           width: 100%;
-          height: 10vh;
+          height: 14vh;
           background-color: rgb(255, 255, 255);
+          display: flex;
+          flex-flow: column;
+          .title {
+            width: 100%;
+            height: 5vh;
+            background-color: rgb(255, 255, 255);
+          }
+          .number {
+            width: 100%;
+            height: 4vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+          }
         }
         .v {
           width: 100%;
-          height: 50vh;
+          height: 55vh;
           background-color: rgb(208, 53, 255);
         }
         .more {
           width: 100%;
-          height: 5vh;
+          height: 6vh;
           background-color: rgb(22, 166, 255);
         }
         .info {
           width: 100%;
-          height: 5vh;
+          height: 10vh;
           background-color: rgb(255, 121, 121);
+          display: flex;
+          flex-flow: row;
+          justify-content: space-around;
         }
       }
     }
