@@ -26,7 +26,9 @@
         <el-button type="danger" size="large">添加作品</el-button>
       </div>
     </div>
-    <Login :show="showLogin" @update:show="showLogin = $event" />
+    <!-- 父组件控制子组件最好的例子
+      子组件通过父组件的属性控制，父组件通过事件控制子组件的属性 -->
+    <Login :show="showLogin" @change="showLogin = $event"></Login>
   </div>
 </template>
 <script lang="ts" setup name="Title">
