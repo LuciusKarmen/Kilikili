@@ -2,11 +2,21 @@
   <div class="title">
     <div class="bar">
       <div class="left">
-        <div class="bar_item"><img src="../../../public/首页.png" alt="" class="p" />首页</div>
-        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />星辰论坛</div>
-        <div class="bar_item"><img src="../../../public/收藏.png" alt="" class="p" />游戏中心</div>
-        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />聊天室</div>
-        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />关于我们</div>
+        <div class="bar_item" @click="home">
+          <img src="../../../public/首页.png" alt="" class="p" />首页
+        </div>
+        <div class="bar_item" @click="bbs">
+          <img src="../../../public/我的.png" alt="" class="p" />星辰论坛
+        </div>
+        <div class="bar_item" @click="game">
+          <img src="../../../public/收藏.png" alt="" class="p" />游戏中心
+        </div>
+        <div class="bar_item" @click="chat">
+          <img src="../../../public/我的.png" alt="" class="p" />聊天室
+        </div>
+        <div class="bar_item" @click="our">
+          <img src="../../../public/我的.png" alt="" class="p" />关于我们
+        </div>
       </div>
       <div class="mid">
         <div>search</div>
@@ -34,7 +44,25 @@
 <script lang="ts" setup name="Title">
 import { ref } from 'vue'
 import Login from '../Login/login.vue'
+import router from '@/router'
 const showLogin = ref(false)
+
+// 跳转页面
+const home = () => {
+  router.push('/')
+}
+const bbs = () => {
+  window.open('http://xingchengnet.online:8810')
+}
+const game = () => {
+  window.open('http://xingchengnet.online:8100')
+}
+const chat = () => {
+  window.open('http://xingchengnet.online:8900')
+}
+const our = () => {
+  window.open('http://xingchengnet.online:8889')
+}
 </script>
 <style lang="scss" scoped>
 .title {

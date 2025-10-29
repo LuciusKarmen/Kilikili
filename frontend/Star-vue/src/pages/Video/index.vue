@@ -15,7 +15,9 @@
               <div>自制</div>
             </div>
           </div>
-          <div class="v"></div>
+          <div class="v">
+            <img src="../../../public/茉莉.png" alt="" />
+          </div>
           <div class="more"></div>
           <div class="info">
             <div>点赞</div>
@@ -44,19 +46,16 @@ import Blank from '../../compontents/Title/blank.vue'
 .video {
   width: 100vw;
   min-height: 100vh;
-  background-color: rgb(127, 255, 42);
   .main {
     width: 100%;
     height: 100vh;
     padding-left: 12.6vw;
     padding-right: 12.6vw;
-    background-color: rgb(255, 215, 166);
     display: flex;
     flex-flow: row;
     .left {
       width: 65%;
       height: 100%;
-      background-color: aqua;
       .video_box {
         width: 100%;
         height: 100vh;
@@ -68,32 +67,48 @@ import Blank from '../../compontents/Title/blank.vue'
           flex-flow: column;
           .title {
             width: 100%;
-            height: 5vh;
-            background-color: rgb(255, 255, 255);
+            margin-top: 2vh;
+            font-size: 3.1vh;
+            font-weight: 500;
+            margin-bottom: 1vh;
+            padding-left: 0.5vw;
           }
           .number {
             width: 100%;
-            height: 4vh;
-            background-color: rgb(255, 255, 255);
+            height: 23%;
             display: flex;
             flex-flow: row;
-            justify-content: space-around;
+            justify-content: left;
+            color: rgb(179, 179, 179);
+            font-size: 1.7vh;
+            gap: 2vw;
+            padding-left: 0.5vw;
           }
         }
         .v {
           width: 100%;
           height: 55vh;
-          background-color: rgb(208, 53, 255);
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
         }
         .more {
           width: 100%;
           height: 6vh;
-          background-color: rgb(22, 166, 255);
+          background-color: rgb(248, 248, 248);
+          display: flex;
+          flex-flow: row;
+          border-radius: 0 0 10px 10px;
+          box-shadow: rgb(143, 143, 143) 0 0 1px;
         }
         .info {
           width: 100%;
           height: 10vh;
-          background-color: rgb(255, 121, 121);
+          margin-top: 3vh;
+
           display: flex;
           flex-flow: row;
           justify-content: space-around;
@@ -104,7 +119,6 @@ import Blank from '../../compontents/Title/blank.vue'
       width: 26.8vw;
       padding-left: 2.4vw;
       height: 100%;
-      background-color: rgb(255, 58, 209);
       .right_t {
         width: 100%;
         height: 30vh;

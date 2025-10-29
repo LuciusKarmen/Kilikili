@@ -158,6 +158,7 @@ const show_example = () => {
     height: 15vh;
     flex-direction: row;
     display: flex;
+    background-color: rgb(255, 255, 255);
     .master {
       width: 10%;
       height: 100%;
@@ -166,6 +167,7 @@ const show_example = () => {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
     .classify {
       width: 66%;
@@ -183,7 +185,7 @@ const show_example = () => {
           text-align: center;
           font-size: 20px;
           color: rgb(155, 155, 155);
-          background-color: rgb(243, 243, 243);
+          background-color: rgb(255, 255, 255);
           border-radius: 10px;
           cursor: pointer;
           box-shadow: 0 0 10px rgba(186, 186, 186, 0.5);
