@@ -30,10 +30,31 @@
       </div>
       <div class="right">
         <div class="right_t">
-          <div class="right_t_l">1</div>
-          <div class="right_t_r">2</div>
+          <div class="face">
+            <div class="pic"><img src="" alt="" /></div>
+          </div>
+          <div class="ind">
+            <div class="name">萝卜开会</div>
+            <div class="tip">我是一个小萝卜~~~~</div>
+            <div class="box">
+              <el-button>私信</el-button>
+              <el-button type="danger">关注</el-button>
+            </div>
+          </div>
         </div>
-        <div class="right_b"></div>
+        <div class="right_m">
+          <div class="ad"></div>
+        </div>
+        <div class="right_b">
+          <div class="ad">
+            <div><img src="" alt="" /></div>
+            <div>
+              <div>中华人民共和国万岁!</div>
+              <div>up:暗夜星辰</div>
+              <div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -43,6 +64,7 @@ import { ref } from 'vue'
 import Blank from '../../compontents/Title/blank.vue'
 </script>
 <style lang="scss" scoped>
+// 48.62vw 1.7768
 .video {
   width: 100vw;
   min-height: 100vh;
@@ -87,7 +109,7 @@ import Blank from '../../compontents/Title/blank.vue'
         }
         .v {
           width: 100%;
-          height: 55vh;
+          aspect-ratio: 1.7768;
           img {
             width: 100%;
             height: 100%;
@@ -121,8 +143,53 @@ import Blank from '../../compontents/Title/blank.vue'
       height: 100%;
       .right_t {
         width: 100%;
-        height: 30vh;
-        background-color: rgb(238, 91, 91);
+        aspect-ratio: 3.3;
+        display: flex;
+        flex-flow: row;
+        .pic {
+          height: 100%;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          padding: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgb(63, 177, 248);
+          }
+        }
+        .ind {
+          width: 80%;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          padding: 15px;
+          gap: 0.5vh;
+          .name {
+            font-size: 1vw;
+            font-weight: 500;
+          }
+          .tip {
+            font-size: 0.8vw;
+            color: rgb(153, 153, 153);
+          }
+          .box {
+            width: 100%;
+            height: 40%;
+            .el-button {
+              width: 40%;
+              flex: 1;
+              height: 100%;
+              font-size: 1vw;
+            }
+          }
+        }
+      }
+      .right_m {
+        width: 100%;
+        aspect-ratio: 2.2;
+        background-color: rgb(48, 224, 255);
       }
       .right_b {
         width: 100%;
