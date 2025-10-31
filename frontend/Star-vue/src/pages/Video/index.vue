@@ -47,11 +47,80 @@
         </div>
         <div class="right_b">
           <div class="ad">
-            <div><img src="" alt="" /></div>
-            <div>
-              <div>中华人民共和国万岁!</div>
-              <div>up:暗夜星辰</div>
-              <div></div>
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
+            </div>
+          </div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
+            </div>
+          </div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
+            </div>
+          </div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
+            </div>
+          </div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
+            </div>
+          </div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
+            </div>
+          </div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">中华人民共和国万岁!</div>
+              <div class="up">up:暗夜星辰</div>
+              <div class="other">
+                <div class="show">播放量</div>
+                <div class="bullet">弹幕</div>
+              </div>
             </div>
           </div>
         </div>
@@ -194,7 +263,57 @@ import Blank from '../../compontents/Title/blank.vue'
       .right_b {
         width: 100%;
         min-height: 70vh;
-        background-color: rgb(204, 255, 0);
+        display: flex;
+        flex-flow: column;
+        .ad {
+          width: 100%;
+          height: 15vh;
+          display: flex;
+          flex-flow: row;
+          background-color: rgb(255, 255, 255);
+          .v {
+            height: 90%;
+            aspect-ratio: 1.7768;
+            padding: 10px;
+            border-radius: 5px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 5px;
+            }
+          }
+          .info {
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            padding: 10px;
+            gap: 0.5vh;
+            .title {
+              font-size: 1vw;
+              font-weight: 400;
+            }
+            .up {
+              font-size: 0.8vw;
+              color: rgb(153, 153, 153);
+            }
+            .other {
+              width: 100%;
+              height: 20%;
+              display: flex;
+              flex-flow: row;
+              justify-content: space-between;
+              .show {
+                font-size: 0.8vw;
+                color: rgb(153, 153, 153);
+              }
+              .bullet {
+                font-size: 0.8vw;
+              }
+            }
+          }
+        }
       }
     }
   }
