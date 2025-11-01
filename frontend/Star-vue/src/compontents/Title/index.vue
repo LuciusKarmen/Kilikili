@@ -31,7 +31,9 @@
         </el-tooltip>
         <div class="bar_item"><img src="../../../public/私信.png" alt="" class="p" />消息</div>
         <div class="bar_item"><img src="../../../public/收藏.png" alt="" class="p" />收藏</div>
-        <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />我的</div>
+        <div class="bar_item" @click="uc">
+          <img src="../../../public/我的.png" alt="" class="p" />我的
+        </div>
         <div class="bar_item"><img src="../../../public/添加.png" alt="" class="p" />创作中心</div>
         <el-button type="danger" size="large">添加作品</el-button>
       </div>
@@ -50,6 +52,9 @@ const showLogin = ref(false)
 // 跳转页面
 const home = () => {
   router.push('/')
+}
+const uc = () => {
+  router.push('/uc')
 }
 const bbs = () => {
   window.open('http://xingchengnet.online:8810')
