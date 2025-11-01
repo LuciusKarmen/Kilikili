@@ -32,7 +32,9 @@
         <div class="bar_item"><img src="../../../public/私信.png" alt="" class="p" />消息</div>
         <div class="bar_item"><img src="../../../public/收藏.png" alt="" class="p" />收藏</div>
         <div class="bar_item"><img src="../../../public/我的.png" alt="" class="p" />我的</div>
-        <div class="bar_item"><img src="../../../public/添加.png" alt="" class="p" />创作中心</div>
+        <div class="bar_item" @click="pf">
+          <img src="../../../public/添加.png" alt="" class="p" />创作中心
+        </div>
         <el-button type="danger" size="large">添加作品</el-button>
       </div>
     </div>
@@ -51,11 +53,14 @@ const showLogin = ref(false)
 const home = () => {
   router.push('/')
 }
+const pf = () => {
+  router.push('/platform')
+}
 const bbs = () => {
   window.open('http://xingchengnet.online:8810')
 }
 const game = () => {
-  window.open('http://xingchengnet.online:8100')
+  window.open('http://xingchengnet.online:426')
 }
 const chat = () => {
   window.open('http://xingchengnet.online:8900')
@@ -72,6 +77,7 @@ const our = () => {
   background-size: cover;
   background-position: center 70%;
   background-repeat: no-repeat;
+  cursor: pointer;
   .bar {
     width: 100%;
     height: 8vh;
