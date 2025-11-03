@@ -23,7 +23,6 @@
         <div class="tu"><img src="../../../public/搜索.png" alt="" /></div>
       </div>
       <div class="right">
-        <!-- 头像框 + 提示,郑重提示 -->
         <el-tooltip content="个人中心" placement="bottom" effect="light">
           <div class="bar_item_p" @click="showLogin = true">
             <img src="../../../public/艾希.png" alt="头像" />
