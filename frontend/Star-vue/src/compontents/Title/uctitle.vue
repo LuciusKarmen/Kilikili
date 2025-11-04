@@ -41,6 +41,13 @@
     <!-- 父组件控制子组件最好的例子
       子组件通过父组件的属性控制，父组件通过事件控制子组件的属性 -->
     <Login :show="showLogin" @change="showLogin = $event"></Login>
+    <div class="self">
+      <div class="pic"><img src="../../../public/艾希.png" alt="用户头像" /></div>
+      <div class="me">
+        <div class="name">暗夜星辰</div>
+        <el-button>修改信息</el-button>
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts" setup name="Title">
@@ -78,6 +85,41 @@ const our = () => {
   background-position: center 70%;
   background-repeat: no-repeat;
   cursor: pointer;
+  position: relative;
+  .self {
+    width: 20%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 12vh;
+    left: 5vw;
+    .pic {
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rg;
+      border: 2px solid rgb(255, 244, 127);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .me {
+      margin-left: 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .name {
+        font-size: 3vh;
+        font-weight: 600;
+      }
+    }
+  }
   .bar {
     width: 100%;
     height: 8vh;
