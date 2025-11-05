@@ -26,7 +26,27 @@
             <div>转发</div>
           </div>
         </div>
-        <div class="commit"></div>
+        <div class="tap"></div>
+        <div class="commit">
+          <div class="title">评论</div>
+          <div class="commit_box">
+            <div class="pic">
+              <img src="../../../public/头像.png" alt="" />
+            </div>
+          </div>
+          <div class="commit_list">
+            <div class="commit_item">
+              <div class="pic">
+                <img src="../../../public/头像.png" alt="" />
+              </div>
+              <div class="info">
+                <div class="name">萝卜开会</div>
+                <div class="time">2025年10月27日23:38:48</div>
+                <div class="content">我吃瓜了</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="right">
         <div class="right_t">
@@ -43,7 +63,16 @@
           </div>
         </div>
         <div class="right_m">
-          <div class="ad"></div>
+          <div class="ad">
+            <div class="v"><img src="" alt="" /></div>
+            <div class="info">
+              <div class="title">广告</div>
+              <div class="up">官方</div>
+              <div class="other">
+                <div class="show">虚位以待</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="right_b">
           <div class="ad">
@@ -147,6 +176,85 @@ import Blank from '../../compontents/Title/blank.vue'
     .left {
       width: 65%;
       height: 100%;
+      .tap {
+        width: 100%;
+        height: 2vh;
+      }
+
+      .commit {
+        width: 100%;
+        margin-top: 2vh;
+        .title {
+          font-size: 2.2vh;
+          font-weight: 500;
+          margin-bottom: 1.5vh;
+        }
+
+        .commit_box {
+          width: 100%;
+          height: 6vh;
+          display: flex;
+          align-items: center;
+          background-color: rgb(248, 248, 248);
+          border-radius: 8px;
+          padding: 0 1vw;
+          box-shadow: rgb(143, 143, 143) 0 0 1px;
+          .pic {
+            height: 70%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .commit_list {
+          width: 100%;
+          margin-top: 2vh;
+          display: flex;
+          flex-direction: column;
+          gap: 1.8vh;
+
+          .commit_item {
+            display: flex;
+            gap: 1vw;
+            .pic {
+              height: 5vh;
+              aspect-ratio: 1;
+              border-radius: 50%;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .info {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              gap: 0.4vh;
+              .name {
+                font-size: 1.6vh;
+                font-weight: 500;
+              }
+              .time {
+                font-size: 1.2vh;
+                color: rgb(153, 153, 153);
+              }
+              .content {
+                font-size: 1.5vh;
+                line-height: 1.6;
+                margin-top: 0.5vh;
+              }
+            }
+          }
+        }
+      }
       .video_box {
         width: 100%;
         height: 100vh;
@@ -197,12 +305,15 @@ import Blank from '../../compontents/Title/blank.vue'
         }
         .info {
           width: 100%;
-          height: 10vh;
+          height: 5vh;
           margin-top: 3vh;
-
           display: flex;
           flex-flow: row;
-          justify-content: space-around;
+          justify-content: left;
+          gap: 1.5vw;
+          border-radius: 10px;
+          background-color: rgb(248, 248, 248);
+          box-shadow: rgb(143, 143, 143) 0 0 1px;
         }
       }
     }
@@ -258,7 +369,55 @@ import Blank from '../../compontents/Title/blank.vue'
       .right_m {
         width: 100%;
         aspect-ratio: 2.2;
-        background-color: rgb(48, 224, 255);
+        .ad {
+          width: 100%;
+          height: 15vh;
+          display: flex;
+          flex-flow: row;
+          background-color: rgb(255, 255, 255);
+          .v {
+            height: 90%;
+            aspect-ratio: 1.7768;
+            padding: 10px;
+            border-radius: 5px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 5px;
+            }
+          }
+          .info {
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            padding: 10px;
+            gap: 0.5vh;
+            .title {
+              font-size: 1vw;
+              font-weight: 400;
+            }
+            .up {
+              font-size: 0.8vw;
+              color: rgb(153, 153, 153);
+            }
+            .other {
+              width: 100%;
+              height: 20%;
+              display: flex;
+              flex-flow: row;
+              justify-content: space-between;
+              .show {
+                font-size: 0.8vw;
+                color: rgb(153, 153, 153);
+              }
+              .bullet {
+                font-size: 0.8vw;
+              }
+            }
+          }
+        }
       }
       .right_b {
         width: 100%;

@@ -14,12 +14,18 @@
           <div class="a">关注数</div>
           <div class="b">0</div>
         </div>
-        <div class="a">粉丝数</div>
-        <div class="b">0</div>
-        <div class="a">播放量</div>
-        <div class="b">0</div>
-        <div class="a">点赞数</div>
-        <div class="b">0</div>
+        <div class="box">
+          <div class="a">粉丝数</div>
+          <div class="b">0</div>
+        </div>
+        <div class="box">
+          <div class="a">播放量</div>
+          <div class="b">0</div>
+        </div>
+        <div class="box">
+          <div class="a">点赞数</div>
+          <div class="b">0</div>
+        </div>
       </div>
     </div>
     <div></div>
@@ -39,6 +45,37 @@ import ucTitle from '../../compontents/Title/uctitle.vue'
     background-color: aqua;
     display: flex;
     justify-content: space-between;
+    .bar_left {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .a {
+        font-size: 2vh;
+        font-weight: 600;
+      }
+    }
+    .bar_right {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .a {
+          font-size: 2vh;
+        }
+        .b {
+          font-size: 2vh;
+        }
+      }
+    }
   }
 }
 </style>
