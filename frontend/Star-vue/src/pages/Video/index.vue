@@ -162,7 +162,7 @@ import { ref } from 'vue'
 import Blank from '../../compontents/Title/blank.vue'
 </script>
 <style lang="scss" scoped>
-// 48.62vw 1.7768
+// 48.62vw 1.777
 .video {
   width: 100vw;
   min-height: 100vh;
@@ -478,3 +478,4 @@ import Blank from '../../compontents/Title/blank.vue'
   }
 }
 </style>
+<!-- 这两天搁置 -->
