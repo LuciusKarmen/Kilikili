@@ -165,10 +165,15 @@ import Blank from '../../compontents/Title/blank.vue'
 // 48.62vw 1.777
 .video {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 90vh;
+  // 上面空10vh
+  .title {
+    width: 100%;
+    height: 10vh;
+  }
   .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-left: 12.6vw;
     padding-right: 12.6vw;
     display: flex;

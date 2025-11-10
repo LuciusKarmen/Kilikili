@@ -36,7 +36,7 @@
         <div class="bar_item" @click="pf">
           <img src="../../../public/添加.png" alt="" class="p" />创作中心
         </div>
-        <el-button type="danger" size="large">添加作品</el-button>
+        <el-button type="danger" size="large" @click="pf">添加作品</el-button>
       </div>
     </div>
     <!-- 父组件控制子组件最好的例子
@@ -76,13 +76,17 @@ const our = () => {
 <style lang="scss" scoped>
 .title {
   width: 100vw;
-  height: 22vh;
+  height: 10vh;
   background-color: rgb(255, 255, 255);
   background-size: cover;
   background-position: center 41%;
   background-repeat: no-repeat;
   cursor: pointer;
-  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
   .bar {
     width: 100%;
     height: 10vh;
@@ -119,9 +123,10 @@ const our = () => {
       border-radius: 10px;
       position: relative;
       .tu {
-        width: 4.5vh;
-        height: 4.5vh;
+        height: 100%;
         position: absolute;
+        padding: 0.5vh;
+        //中间
         top: 0;
         right: 0;
         :hover {
@@ -170,6 +175,10 @@ const our = () => {
         flex: 1;
         height: 100%;
         font-size: 2.2vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         .p {
           width: 3vh;
           height: 3vh;
@@ -179,6 +188,27 @@ const our = () => {
         &:hover {
           // 向上移动一点
           transform: translateY(-0.5vh);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    .bar {
+      .left {
+        .bar_item {
+          font-size: 1.5vh;
+        }
+      }
+      .mid {
+        .tu {
+          padding: 0.2vh;
+        }
+      }
+      .right {
+        .el-button {
+          font-size: 1.5vh;
         }
       }
     }

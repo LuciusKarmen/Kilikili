@@ -36,7 +36,7 @@
         <div class="bar_item" @click="pf">
           <img src="../../../public/添加.png" alt="" class="p" />创作中心
         </div>
-        <el-button type="danger" size="large">添加作品</el-button>
+        <el-button type="danger" size="large" @click="pf">添加作品</el-button>
       </div>
     </div>
     <!-- 父组件控制子组件最好的例子
