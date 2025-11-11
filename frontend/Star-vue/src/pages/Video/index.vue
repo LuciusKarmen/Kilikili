@@ -31,13 +31,13 @@
           <div class="title">评论</div>
           <div class="commit_box">
             <div class="pic">
-              <img src="../../../public/头像.png" alt="" />
+              <img src="../../../public/艾希.png" alt="" />
             </div>
           </div>
           <div class="commit_list">
             <div class="commit_item">
               <div class="pic">
-                <img src="../../../public/头像.png" alt="" />
+                <img src="../../../public/艾希.png" alt="" />
               </div>
               <div class="info">
                 <div class="name">萝卜开会</div>
