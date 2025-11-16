@@ -9,7 +9,7 @@
           <img src="../../../public/我的.png" alt="" class="p" />星辰论坛
         </div>
         <div class="bar_item" @click="game">
-          <img src="../../../public/收藏.png" alt="" class="p" />游戏中心
+          <img src="../../../public/收藏.png" alt="" class="p" />星辰百科
         </div>
         <div class="bar_item" @click="chat">
           <img src="../../../public/我的.png" alt="" class="p" />聊天室
@@ -64,13 +64,13 @@ const bbs = () => {
   window.open('http://xingchengnet.online:8810')
 }
 const game = () => {
-  window.open('http://xingchengnet.online:426')
+  window.open('http://xingchengnet.online:7777')
 }
 const chat = () => {
   window.open('http://xingchengnet.online:8900')
 }
 const our = () => {
-  window.open('http://xingchengnet.online:8889')
+  window.open('http://xingchengnet.online:5280')
 }
 </script>
 <style lang="scss" scoped>
